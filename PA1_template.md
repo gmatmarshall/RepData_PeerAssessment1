@@ -154,27 +154,26 @@ $(document).ready(function () {
 <div id="global-variables-and-libraries" class="section level2">
 <h2>Global variables and libraries</h2>
 <pre class="r"><code>library(lattice)
-library(rmarkdown)
-library(knitr)
+library(rmarkdown)</code></pre>
+<pre><code>## Warning: package 'rmarkdown' was built under R version 3.3.1</code></pre>
+<pre class="r"><code>library(knitr)
 knitr::opts_chunk$set(echo=TRUE,results=&quot;show&quot;,cache=TRUE)</code></pre>
 </div>
 <div id="step-1-a-downloading-and-unzipping-the-data-set-file" class="section level2">
 <h2>Step 1-a: Downloading and Unzipping the data set file</h2>
 <pre><code># Creating a new working directory and downloading and unzipping the file:
 getwd()
-if(!file.exists(&quot;C:/Ludmilla/1_Data Science/9-9-2016&quot;)) (dir.create(&quot;C:/Ludmilla/1_Data Science/9-9-2016&quot;))
+if(!file.exists(&quot;C:/Ludmilla/1_Data_Science/9_9_2016&quot;)) (dir.create(&quot;C:/Ludmilla/1_Data_Science/9_9_2016&quot;))
 fileurl&lt;- &quot;https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip&quot;
 download.file(fileurl, destfile= &quot;./repdata%2Fdata%2Factivity.zip&quot;)
 list.files()
-unzip(zipfile= &quot;C:/Ludmilla/1_Data Science/9-9-2016/repdata%2Fdata%2Factivity.zip&quot;)
-setwd(&quot;C:/Ludmilla/1_Data Science/9-9-2016&quot;)
-
-#rmarkdown::render('PA1_template.Rmd', 
-#                  output_file='PA1_template.md')</code></pre>
+unzip(zipfile= &quot;C:/Ludmilla/1_Data_Science/9_9_2016/repdata%2Fdata%2Factivity.zip&quot;)
+setwd(&quot;C:/Ludmilla/1_Data_Science/9_9_2016&quot;)
+</code></pre>
 </div>
 <div id="step-1-b-read-the-data" class="section level2">
 <h2>Step 1-b: Read the Data</h2>
-<p>This is the Original file that I can re-use multiple times without re-downloading the “repdata%2Fdata%2Factivity.zip”&quot; file</p>
+<p>This is the Original file that I can re-use multiple times without re-downloading the “repdata%2Fdata%2Factivity.zip” file</p>
 <pre class="r"><code>dsOriginal &lt;- read.table(&quot;activity.csv&quot;,
                header=TRUE,
                sep=&quot;,&quot;,
