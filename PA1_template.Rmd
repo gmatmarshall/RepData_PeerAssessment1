@@ -31,20 +31,18 @@ knitr::opts_chunk$set(echo=TRUE,results="show",cache=TRUE)
 ```
 # Creating a new working directory and downloading and unzipping the file:
 getwd()
-if(!file.exists("C:/Ludmilla/1_Data Science/9-9-2016")) (dir.create("C:/Ludmilla/1_Data Science/9-9-2016"))
+if(!file.exists("C:/Ludmilla/1_Data_Science/9_9_2016")) (dir.create("C:/Ludmilla/1_Data_Science/9_9_2016"))
 fileurl<- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
 download.file(fileurl, destfile= "./repdata%2Fdata%2Factivity.zip")
 list.files()
-unzip(zipfile= "C:/Ludmilla/1_Data Science/9-9-2016/repdata%2Fdata%2Factivity.zip")
-setwd("C:/Ludmilla/1_Data Science/9-9-2016")
+unzip(zipfile= "C:/Ludmilla/1_Data_Science/9_9_2016/repdata%2Fdata%2Factivity.zip")
+setwd("C:/Ludmilla/1_Data_Science/9_9_2016")
 
-#rmarkdown::render('PA1_template.Rmd', 
-#                  output_file='PA1_template.md')
 ```
 
 ## Step 1-b: Read the Data
 
-This is the Original file that I can re-use multiple times without re-downloading the "repdata%2Fdata%2Factivity.zip"" file
+This is the Original file that I can re-use multiple times without re-downloading the "repdata%2Fdata%2Factivity.zip" file
 
 
 ```{r}
